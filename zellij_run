@@ -38,7 +38,7 @@ select choice in "${options[@]}"; do
 	case "$choice" in
 		'attach')
 			session_name="$(zellij ls \
-				| fzf --cycle --header "Select session to attach" --prompt "Session: " \
+				| fzf --header "Select session to attach" --prompt "Session: " \
 				| awk '{print $1}')"
 			zellij a "$session_name"
 			exit 0 ;;
@@ -48,7 +48,7 @@ select choice in "${options[@]}"; do
 			[ -z "$session_name" ] && continue
 			zellij -s "$session_name"
 			exit 0 ;;
-		'delete') zellij ls | fzf -m --cycle --header "Select sessions to delete" \
+		'delete') zellij ls | fzf -m --header "Select sessions to delete" \
 			| awk '{print $1}' | xargs -I {} zellij delete-session {} ; exit 0 ;;
 		'list') zellij ls | less -SR ;;
 	esac
