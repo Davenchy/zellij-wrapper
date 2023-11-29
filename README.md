@@ -9,10 +9,10 @@ Set execute permissions to the script
 chmod +x zellij_run
 ```
 
-This script runs only in interactive mode
+This script runs in interactive/non-interactive mode
 
 ```bash
-./zellij_run
+./zellij_run [action]
 Welcome to zellij runner!
 
 
