@@ -9,6 +9,20 @@ Set execute permissions to the script
 chmod +x zellij_run
 ```
 
+This script runs only in interactive mode
+
+```bash
+./zellij_run
+Welcome to zellij runner!
+
+
+1) attach
+2) create
+3) list
+4) delete
+Please enter your choice: 
+```
+
 ## Dependencies
 
 This script requires `fzf` `zellij` packages to be installed
